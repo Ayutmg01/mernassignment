@@ -15,7 +15,7 @@ console.log(shirt2)
 // Expected output:
 // 400
 const product3 = { name: 'Laptop', quantity: 2, price: 200 };
-const totalPrice =  product3.price * 2;
+const totalPrice =  product3.price * product3.quantity;
 console.log(totalPrice)
 
 // Q4: Update the value of the 'age' property in the 'person' object to 35.
