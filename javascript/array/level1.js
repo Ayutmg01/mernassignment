@@ -1,18 +1,20 @@
-const arr = ['kaylin', 'ram', 'gopal', 'ankit']
+//Q1 find list of numbers divisible by 3
 
-const userDetails = {
-    'kaylin': 'khanal',
-    'alisha': 'rauniyar',
-    'ayush': 'rai',
-    'gopal': 'tharu'
-}
-const ans = arr.map((item)=>{
-    if(userDetails[item]){
-        return item + userDetails['item']
+const arr = [3,5,1,2,9,12]
+const ansarr = arr.filter((item,id)=>{
+    if(item%3 === 0 ){
+    return item;
     }
-}).filter(item=>item)
-console.log(ans);
-git s
+})
+console.log(ansarr)
 
-// expected output :
-// ['kaylin khanal', 'gopal tharu']
+//expected output---> [3,9,12]
+// hint: %3 === 0
+// filter
+//syntax:
+// arr.filter((item,id)=>{
+//     //
+// })
+
+
+//----------------
