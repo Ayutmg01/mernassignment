@@ -34,7 +34,7 @@ else
 // Expected output:
 // false
 const car4 = { make: 'Toyota', year: 2021 };
-const properties = 'make'in car4 && 'model' in car4 && 'year' in car4;
+const properties = 'make' in car4  && 'model'in car4  && 'year' in car4;
 console.log(properties)
 
 // Q5: Create a copy of the 'student' object without modifying the original object.
@@ -49,3 +49,31 @@ console.log(copied);
 // Expected output:
 // true
 const user6 = { name: 'John', age: 30, address: '123 Main St' };
+
+// Q7: Retrieve the keys of the 'inventory' object as an array.
+// Expected output:
+// ['apples', 'bananas', 'oranges']
+const inventory7 = { apples: 10, bananas: 5, oranges: 8 };
+const arr = Object.keys(inventory7)
+console.log(arr)
+
+// Q8: Create an array of all the property values from the 'data' object.
+// Expected output:
+// ['John', 25, 'New York']
+const data8 = { name: 'John', age: 25, city: 'New York' };
+const values = Object.values(data8)
+console.log(values)
+
+// Q9: Check if any property in the 'book' object has a value of null.
+// Expected output:
+// false
+const book9 = { title: 'JavaScript Basics', author: 'John Smith', year: 2020 };
+Object.values(book9).includes(null)
+
+// Q10: Reverse the 'fullName' property value in the 'person' object.
+// Expected output:
+// 'doe John'
+const person10 = { fullName: 'John doe' };
+
+const output = person10.fullName.split(" ").reverse().join(' ');
+console.log(output);
