@@ -5,7 +5,7 @@
 // 'John Doe'
 const person1 = { firstName: 'John', lastName: 'Doe', age: 30 };
 const fullName = person1.firstName +' '+ person1.lastName
-console.log(fullName)
+console.log('Q1:' + fullName);
 
 // Q2: Create a new object by merging the 'details1' and 'details2' objects.
 // Expected output:
@@ -13,7 +13,7 @@ console.log(fullName)
 const details1 = { name: 'John', age: 25 };
 const details2 = { city: 'New York', hobby: 'Soccer' };
 const combined = {...details1, ...details2};
-console.log(combined)
+console.log('Q2:', combined)
 
 // Q3: Add a new property 'quantity' with the value 10 to the 'product' object, if it doesn't already exist.
 // Expected output:
@@ -23,11 +23,11 @@ const checekies = 'name'in product3 && 'price' in product3 && 'quantity' in prod
 if ( checekies === false)
     {
         product3.quantity = 10;
-        console.log(product3);
+        console.log('Q3:',product3);
     }
 else 
     {
-        console.log(product3)
+        console.log('Q3:',product3)
     }
 
 // Q4: Check if all properties ('make', 'model', 'year') exist in the 'car' object.
@@ -35,7 +35,7 @@ else
 // false
 const car4 = { make: 'Toyota', year: 2021 };
 const properties = 'make' in car4  && 'model'in car4  && 'year' in car4;
-console.log(properties)
+console.log('Q4:',properties)
 
 // Q5: Create a copy of the 'student' object without modifying the original object.
 // Expected output:
@@ -43,37 +43,41 @@ console.log(properties)
 const student5 = { name: 'Alice', age: 20, grade: 'A' };
 const copied = {...student5}
 student5.age = 50 
-console.log(copied);
+console.log('Q5:',copied);
 
 // Q6: Check if the 'address' property in the 'user' object is a string.
 // Expected output:
 // true
 const user6 = { name: 'John', age: 30, address: '123 Main St' };
+function isAddressString(user) {
+    return typeof user.address === 'string';
+}
+console.log('Q2:', isAddressString(user6));
 
 // Q7: Retrieve the keys of the 'inventory' object as an array.
 // Expected output:
 // ['apples', 'bananas', 'oranges']
 const inventory7 = { apples: 10, bananas: 5, oranges: 8 };
 const arr = Object.keys(inventory7)
-console.log(arr)
+console.log('Q7:',arr)
 
 // Q8: Create an array of all the property values from the 'data' object.
 // Expected output:
 // ['John', 25, 'New York']
 const data8 = { name: 'John', age: 25, city: 'New York' };
 const values = Object.values(data8)
-console.log(values)
+console.log('Q8:',values)
 
 // Q9: Check if any property in the 'book' object has a value of null.
 // Expected output:
 // false
 const book9 = { title: 'JavaScript Basics', author: 'John Smith', year: 2020 };
-Object.values(book9).includes(null)
+const hasNullValue = Object.values(book9).includes(null)
+console.log('Q9',hasNullValue);
 
 // Q10: Reverse the 'fullName' property value in the 'person' object.
 // Expected output:
 // 'doe John'
 const person10 = { fullName: 'John doe' };
-
 const output = person10.fullName.split(" ").reverse().join(' ');
-console.log(output);
+console.log('Q10:',output);
