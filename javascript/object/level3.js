@@ -26,7 +26,7 @@ else{
     return 'Invalid age';
 }
 }
-console.log(getAgeGroup(person1));
+console.log('Q1:',getAgeGroup(person1));
 
 
 // Q2: Create a function that takes the 'inventory' object and returns the total number of items in stock.
@@ -44,16 +44,28 @@ function totalInStock(fruits)
  }
  return sum ;
 }
-console.log(totalInStock(inventory2));
+console.log('Q2:',totalInStock(inventory2));
 
 
 // Q3: Create a function that takes the 'students' object and returns an array of student names.
 // Expected output for students3: ['Alice', 'Bob', 'Emma']
 const students3 = { student1: 'Alice', student2: 'Bob', student3: 'Emma' };
 const stuArray = Object.values(students3);
-console.log(stuArray);
+console.log('Q3:', stuArray);
 
 
 // Q4: Create a function that takes the 'details' object and checks if all properties have values.
 // Expected output for details4: true
 const details4 = { name: 'John', age: 25, city: 'New York' };
+function checkValues(detail)
+{
+    for(let key in detail)
+        {
+            if (detail[key] ===null || detail[key] === undefined)
+                {
+                    return false;
+                }
+        }
+        return true;
+}
+console.log('Q4:', checkValues(details4));
