@@ -115,3 +115,9 @@ console.log('Q7',getAverageSalary(employees7))
 // Q8: Create a function that takes the 'data' object and returns an array of values sorted in ascending order.
 // Expected output for data8: [25, 'John', 'New York']
 const data8 = { name: 'John', age: 25, city: 'New York' };
+
+
+
+// Q9: Create a function that takes the 'order' object and calculates the total cost based on quantity and price.
+// Expected output for order9: 150
+const order9 = { item: 'Laptop', quantity: 2, price: 75 };
