@@ -69,3 +69,45 @@ function checkValues(detail)
         return true;
 }
 console.log('Q4:', checkValues(details4));
+
+// Q5: Create a function that takes the 'products' object and returns the average price of all products.
+// Expected output for products5: 350.00
+const products5 = { product1: { name: 'Laptop', price: 800 }, product2: { name: 'Phone', price: 100 }, product3: { name: 'Tablet', price: 150 } };
+function average(products){
+    let totalPrice = 0;
+    let productCount = 0;
+
+for (let product in products){
+    totalPrice += products[product].price;
+    productCount++;
+}
+return(totalPrice/ productCount).toFixed(2);
+}
+console.log(average(products5));
+
+// Q6: Create a function that takes the 'scores' object and returns the highest score.
+// Expected output for scores6: 95
+const scores6 = { math: 85, science: 90, english: 95 };
+function high(scores){
+    return Math.max(...Object.values(scores));
+
+}
+console.log(high(scores6));
+
+
+// Q7: Create a function that takes the 'employees' object and returns the average salary.
+// Expected output for employees7: 55000
+const employees7 = { emp1: { name: 'John', salary: 60000 }, emp2: { name: 'Alice', salary: 50000 }, emp3: { name: 'Bob', salary: 55000 } };
+
+function getAverageSalary(employees) {
+    let totalSalary = 0;
+    let employeeCount = 0;
+
+    for (let emp in employees) {
+        totalSalary += employees[emp].salary;
+        employeeCount++;
+    }
+
+    return totalSalary / employeeCount;
+}
+console.log(getAverageSalary(employees7))
