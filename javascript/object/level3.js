@@ -83,7 +83,7 @@ for (let product in products){
 }
 return(totalPrice/ productCount).toFixed(2);
 }
-console.log(average(products5));
+console.log('Q5',average(products5));
 
 // Q6: Create a function that takes the 'scores' object and returns the highest score.
 // Expected output for scores6: 95
@@ -92,7 +92,7 @@ function high(scores){
     return Math.max(...Object.values(scores));
 
 }
-console.log(high(scores6));
+console.log('Q6',high(scores6));
 
 
 // Q7: Create a function that takes the 'employees' object and returns the average salary.
@@ -110,4 +110,8 @@ function getAverageSalary(employees) {
 
     return totalSalary / employeeCount;
 }
-console.log(getAverageSalary(employees7))
+console.log('Q7',getAverageSalary(employees7))
+
+// Q8: Create a function that takes the 'data' object and returns an array of values sorted in ascending order.
+// Expected output for data8: [25, 'John', 'New York']
+const data8 = { name: 'John', age: 25, city: 'New York' };
