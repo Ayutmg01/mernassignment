@@ -121,3 +121,26 @@ const data8 = { name: 'John', age: 25, city: 'New York' };
 // Q9: Create a function that takes the 'order' object and calculates the total cost based on quantity and price.
 // Expected output for order9: 150
 const order9 = { item: 'Laptop', quantity: 2, price: 75 };
+function totalPrice(order){
+    const quantity = order.quantity;
+    const price = order.price;
+    const total = quantity * price;
+    return total;
+}
+console.log('Q8',totalPrice(order9));
+
+
+// Q10: Create a function that takes the 'expenses' object and returns the total amount spent.
+// Expected output for expenses10: 500
+const expenses10 = { rent: 200, groceries: 150, utilities: 100, entertainment: 50 };
+function totalAmount(expenses)
+{
+    const expenseValues = Object.values(expenses);
+    let sum = 0;
+    for ( let expense of expenseValues)
+        {
+            sum += expense; 
+        }
+        return sum ;
+}
+console.log('Q10',totalAmount(expenses10));
